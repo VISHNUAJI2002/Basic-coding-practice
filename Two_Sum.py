@@ -26,6 +26,8 @@ def secondmethod(arr,t):
 nums = list(map(int, input().split()))
 target = int(input())
 
+#first method
 print(firstmethod(nums,target))
+#second method
 print(secondmethod(nums,target))
 
