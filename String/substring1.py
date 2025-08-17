@@ -1,4 +1,4 @@
-'''finding longest substring without duplicate characters and its length.'''
+#finding longest substring without duplicate characters and its length.
 
 def solution(s):
     length=0
