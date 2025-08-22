@@ -1,4 +1,4 @@
-'''For two strings main and sub, return the index of the 
+'''For two strings "main" and "sub", return the index of the 
 first occurrence of sub in main, or -1 if sub is not part of main.
 '''
 
