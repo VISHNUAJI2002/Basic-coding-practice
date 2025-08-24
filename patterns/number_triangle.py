@@ -1,4 +1,4 @@
-#Number triangle
+#Number triangle (right angled)
 
 def num_triangle(n):
     for i in range(1, n+1):
