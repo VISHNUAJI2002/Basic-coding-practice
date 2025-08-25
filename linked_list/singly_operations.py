@@ -9,6 +9,7 @@ class SinglyLinkedlist:
     def __init__(self):
         self.head=None
         self.tail=None
+        self.count=0
     
     def printlist(self):
         temp=self.head
@@ -16,7 +17,8 @@ class SinglyLinkedlist:
             print(temp.data,"-> ", end="")
             temp=temp.next
         print(None)    
-        
+
+    
     def insert_begin(self,data):
         newnode=Node(data)
         if self.head==None:
@@ -25,7 +27,9 @@ class SinglyLinkedlist:
         else:    
             newnode.next=self.head
             self.head=newnode
+        self.count+=1
 
+    
     def insert_end(self,data):
         newnode=Node(data)
         if self.head==None:
@@ -34,7 +38,7 @@ class SinglyLinkedlist:
         else:
             self.tail.next=newnode
             self.tail=newnode
-
+        self.count+=1
     
     def insert_position(self,data,pos):
         newnode=Node(data)
@@ -56,7 +60,8 @@ class SinglyLinkedlist:
         temp.next = newnode
         if newnode.next is None:  
             self.tail = newnode    
-    
+        self.count+=1
+        
 
     def delete_end(self):
         if self.head:
@@ -70,7 +75,9 @@ class SinglyLinkedlist:
                 self.tail = temp
                 self.tail.next = None
             print("Deletion successfull")
-            
+            self.count-=1
+
+    
     def delete_begin(self):
         if self.head:
             if self.head == self.tail:
@@ -81,7 +88,9 @@ class SinglyLinkedlist:
                 self.head = self.head.next
                 temp.next = None
             print("Deletion successfull")    
+            self.count-=1
 
+    
     def delete_position(self, pos):
         if pos<1:
             print("Invalid position")
@@ -102,7 +111,12 @@ class SinglyLinkedlist:
             return
         temp.next=temp.next.next
         print("Deletion successful")
-                
+        self.count-=1
+
+  
+    def countNodes(self):
+        return self.count
+        
                 
 list1=SinglyLinkedlist() 
 
@@ -114,7 +128,8 @@ while True:
     print("5.Delete begin")
     print("6.Delete end")
     print("7.Delete at a position")
-    print("8.Exit")
+    print("8.Nodes count")
+    print("9.Exit")
     
     try:
         n=int(input("Enter choice:"))
@@ -142,6 +157,8 @@ while True:
         pos=int(input("Position:"))
         list1.delete_position(pos)
     elif n==8:
+        print(list1.countNodes())
+    elif n==9:
         break
     else:
         print("Invalid choice")
