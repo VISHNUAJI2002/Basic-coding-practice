@@ -1,10 +1,10 @@
 '''
-You are given a number a. Your task is to check whether the number of odd divisors 
-of a is equal to the number of even divisors.
+You are given a number. Check whether the number of odd divisors 
+of this number is equal to the number of even divisors.
 If the counts are equal return True, otherwise False.
 '''
 
-def equal_odd_even_divisors(n):
+def Equal_odd_even_divisors(n):
     odd=0
     even=0
     for i in range(1,n+1):
@@ -19,4 +19,4 @@ def equal_odd_even_divisors(n):
         return False
         
 n=int(input())
-print(equal_odd_even_divisors(n))
+print(Equal_odd_even_divisors(n))
