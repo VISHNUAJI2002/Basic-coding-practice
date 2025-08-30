@@ -7,7 +7,7 @@ Output: true
 Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
 '''
 
-def canJump(nums):
+def canJump1(nums):
     n=len(nums)
     if n==1:
         return True
@@ -16,7 +16,21 @@ def canJump(nums):
         if i+nums[i]>=goal:
             goal=i
     return goal==0
-    
+
+
+def canJump2(nums):
+    maxreach=0
+    for i,jump in enumerate(nums):
+        if i > maxreach:
+            return False
+        maxreach=max(maxreach,i+jump)
+    return True
 
 nums=list(map(int,input().split()))
-print(canJump(nums))
+print(canJump1(nums))
+#print(canJump2(nums))
+
+'''
+3 2 1 0 0 4
+False
+'''
