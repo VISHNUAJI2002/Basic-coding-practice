@@ -1,4 +1,9 @@
-# return first Repeated Character
+'''
+Return first Repeated Character
+Example:
+Input: greater
+Output: e
+'''
 
 def firstrep(s):
     seen=set()
