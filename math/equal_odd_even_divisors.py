@@ -2,6 +2,10 @@
 You are given a number. Check whether the number of odd divisors 
 of this number is equal to the number of even divisors.
 If the counts are equal return True, otherwise False.
+
+example:
+input:14
+output:True
 '''
 
 def Equal_odd_even_divisors(n):
