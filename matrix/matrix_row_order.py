@@ -2,6 +2,16 @@
 Return True if all rows in a matrix that
 are in non increasing order or non decreasing order.
 Else False.
+Example:
+Input:
+3 
+4
+5 5 8 9
+2 2 2 2
+9 8 7 6
+Output:
+True
+True
 '''
 
 def count1(matrix,m,n):
@@ -33,15 +43,5 @@ cols=int(input())
 matrix=[list(map(int,input().split()))for _ in range(rows)]
 print(count1(matrix,rows,cols))
 print(count2(matrix,rows,cols))
-
-'''
-3 
-4
-5 5 8 9
-2 2 2 2
-9 8 7 6
-True
-True
-'''
 
     
