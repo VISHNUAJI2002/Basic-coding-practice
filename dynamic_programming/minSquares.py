@@ -1,6 +1,10 @@
 '''
 Given a positive integer N, find the minimum number of perfect square numbers
 (such as 1, 4, 9, 16, ...) whose sum is equal to N.
+
+Example:
+Input: 10
+Output: 2
 '''
 
 def MinSquares(N):
