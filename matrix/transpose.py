@@ -1,4 +1,16 @@
-#Transpose of given matrix
+'''
+Transpose of given matrix
+Example:
+Input:
+2
+3
+4 5 6 
+1 2 3
+Output:
+[4, 1]
+[5, 2]
+[6, 3]
+'''
 
 def transpose_sqr(x):    #for square matrices
     n=len(x)
@@ -26,13 +38,4 @@ else:              # rectangular matrix
 
 for i in result:
     print(i)
-
-'''
-2
-3
-4 5 6 
-1 2 3
-[4, 1]
-[5, 2]
-[6, 3]
-'''
+    
