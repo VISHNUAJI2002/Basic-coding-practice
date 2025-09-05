@@ -1,4 +1,15 @@
-#Search an element in a matrix
+'''
+Search an element in a matrix
+Example:
+Input:
+2
+3
+1 2 3
+4 5 6
+5
+Output:
+True
+'''
 
 def search(x,m,n,t):
     l=0
