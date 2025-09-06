@@ -11,7 +11,7 @@ Explanation: There are two ways to climb to the top.
 2. 2 steps
 '''
 
-def climbStairs(n):
+def climbStairs(n):   
     if n <= 2:
         return n   
     dp= [0]*(n+1)   # dp[i] will store number of ways to reach step i
@@ -20,6 +20,15 @@ def climbStairs(n):
     for i in range(3,n+1):
         dp[i]=dp[i-1]+dp[i-2]   # recurrence relation
     return dp[n]
+
+def climbStairs2(n):  
+    if n<=2:
+        return n
+    a, b = 1, 2   # a = dp[i-2], b = dp[i-1]
+    for i in range(3, n+1):
+        a, b = b, a + b
+    return b  
+    
 
 
 n=int(input())
