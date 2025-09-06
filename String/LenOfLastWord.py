@@ -1,5 +1,9 @@
-#return the length of the last word in the string.
-
+'''
+Return the length of the last word in the string.
+Example:
+Input: nice to meet you 
+Output: 3
+'''
 def lengthOfLastWord(s):
 
     length=0
