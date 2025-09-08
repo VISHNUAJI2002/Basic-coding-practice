@@ -1,4 +1,11 @@
-#Fnd the longest common prefix string amongst an array of strings.
+'''
+Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string "".
+
+Example :
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+'''
 
 def longestCommonPrefix(strs):
     if not strs:
@@ -10,7 +17,6 @@ def longestCommonPrefix(strs):
             if not prefix:
                 return ""
     return prefix        
-
 
 
 s=input().split()
