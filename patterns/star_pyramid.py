@@ -1,4 +1,16 @@
-#Pyramid (stars)
+'''
+Pyramid (stars)
+Example:
+Input: 
+5
+Output:
+    *
+   ***
+  *****
+ *******
+*********
+'''
+
 
 def pyramid(n):
     for i in range(1,n+1):
