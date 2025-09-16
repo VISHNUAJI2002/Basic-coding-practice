@@ -24,7 +24,7 @@ def three_sum_closest(nums, target):
             elif current_sum>target:
                 r-=1
             else:
-                return current_sum
+                return current_sum              #current_sum==target
                 
     return closest_sum
 
@@ -33,7 +33,3 @@ nums=list(map(int,input().split()))
 target=int(input())
 print(three_sum_closest(nums,target))
 
-
-nums=list(map(int,input().split()))
-target=int(input())
-print(three_sum_closest(nums,target))
