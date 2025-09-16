@@ -1,4 +1,18 @@
-#diamond (stars)
+'''
+Diamond (stars)
+
+Example:
+Input:
+4
+Output:
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
+'''
 
 def diamond(n):
     for i in range(1,n+1):
