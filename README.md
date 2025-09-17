@@ -27,6 +27,3 @@ Each problem file follows a consistent structure:
 - One or more functions implementing different approaches (brute force, hashing, optimal solution, etc.).
 - Input section
 
-Input is usually taken using input().
-
-Functions are called and outputs are printed for testing.
