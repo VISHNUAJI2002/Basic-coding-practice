@@ -1,4 +1,16 @@
-#Number triangle (right angled)
+'''
+Number triangle (right angled)
+
+Example:
+Input:
+5
+Output:
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+'''
 
 def num_triangle(n):
     for i in range(1, n+1):
