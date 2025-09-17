@@ -23,7 +23,6 @@ Each problem file follows a consistent structure:
 - Problem statement
 - A short description of the task.
 - At least one example with input/output.
-- Functions/Approaches
-- One or more functions implementing different approaches (brute force, hashing, optimal solution, etc.).
+- Functions (One or more functions implementing different approaches (brute force, hashing, optimal solution, etc.)).
 - Input section
 
