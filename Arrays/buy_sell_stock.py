@@ -13,7 +13,7 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 '''
 
 
-def maxProfit(prices):
+def maxProfit(prices):                #brute force - O(n²)
     maxprofit=0
     n=len(prices)
     for i in range(n):
@@ -21,9 +21,17 @@ def maxProfit(prices):
         for j in range(i+1,n):
             profit=prices[j]-prices[i]
             maxprofit=max(maxprofit,profit)
-    if maxprofit>0:
-        return maxprofit
-    return 0
-    
+    return maxprofit
+
+
+def maxprofit_optimal(prices):        #optimal - O(n)
+    buy=float('inf')
+    maxprofit=0
+    for i in prices:
+        buy=min(buy,i)
+        maxprofit=max(maxprofit,i-buy)
+    return maxprofit
+
+
 prices=list(map(int,input().split()))
-print(maxProfit(prices))
+print(maxProfit_optimal(prices))
