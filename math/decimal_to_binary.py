@@ -11,8 +11,7 @@ def dec_to_bin(n):
     negative=False
     if n<0:
         negative=True
-        n=abs(n)
-    
+        n=abs(n) 
     bits=[]
     while n>0:
         bits.append(str(n%2))
@@ -23,7 +22,16 @@ def dec_to_bin(n):
         return '-'+binary
     else:
         return binary
+
+
+def dec_to_bin_function(n):
+    if n >= 0:
+        return bin(n)[2:]     # remove "0b" prefix
+    else:
+        return '-' + bin(n)[3:]    # remove "-0b" prefix
         
 
 n=int(input())
 print(dec_to_bin(n))
+print(dec_to_bin_function(n))
+
