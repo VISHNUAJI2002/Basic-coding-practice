@@ -1,4 +1,13 @@
-# print uncommon characters between two strings lexicographily
+'''
+Print uncommon characters between two strings in lexicographical order.
+
+Example:
+Input: apple peach
+Output: clh
+Explanation:
+Uncommon characters between 'apple' and 'peach' are c, l, h → printed in sorted order.
+'''
+
 
 def uncommonchars1(s1,s2):
     a = set(s1)
