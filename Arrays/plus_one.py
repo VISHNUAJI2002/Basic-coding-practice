@@ -14,7 +14,7 @@ Explanation: The array represents the integer 123.
 '''
 
 
-def plus_one(digits):
+def plus_one(digits):       #Optimal
     n=len(digits)
     for i in range(n-1,-1,-1):
         if digits[i]<9:
@@ -24,5 +24,17 @@ def plus_one(digits):
     return [1] + [0] * n    # If all digits were 9, add 1 at the front
 
 
-digits = list(map(int, input().split()))
-print(plus_one(digits))
+def plusOne(digits):
+    n=len(digits)
+    string=str(digits[0])
+    for i in range(1,n):
+        string+=str(digits[i]) 
+    num=str(int(string)+1)
+    l=[int(k) for k in num] 
+    return l
+
+
+digits_1 = list(map(int, input().split()))
+print(plus_one(digits_1))
+digits_2 = list(map(int, input().split()))
+print(plusOne(digits_2))
