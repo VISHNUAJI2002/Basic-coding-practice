@@ -7,7 +7,7 @@ Output: [0,1]
 Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 '''
 
-def firstmethod(arr,t):
+def firstmethod(arr,t):            #Brute force O(N^2) 
     n=len(arr)
     res=[]
     for i in range(n-1):
@@ -16,7 +16,7 @@ def firstmethod(arr,t):
                 res.append([i,j])
     return res            
 
-def secondmethod(arr,t):
+def secondmethod(arr,t):            #Optimal O(N) 
     mydict={}
     res=[]
     i=0
