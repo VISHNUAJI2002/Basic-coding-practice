@@ -12,7 +12,7 @@ Output: 1
 def singleNumber(nums):
     res=0
     for i in nums:
-        res=res^i
+        res=res^i    # XOR cancels out duplicate numbers and keeps the unique one
     return res    
     
     
