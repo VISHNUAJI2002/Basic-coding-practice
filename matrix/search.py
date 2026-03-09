@@ -1,37 +1,62 @@
-'''
-Search an element in a matrix
+"""
+Problem Title: Search a 2D Matrix
+
+Description:
+You are given an m x n matrix where:
+1. Each row is sorted in non-decreasing order.
+2. The first element of each row is greater than the last element of the previous row.
+Return True if the target exists in the matrix, otherwise False.
+Time Complexity Required: O(log(m*n))
+
 Example:
 Input:
-2
-3
-1 2 3
-4 5 6
-5
+3 4
+1 3 5 7
+10 11 16 20
+23 30 34 60
+target = 3
+
 Output:
 True
-'''
+"""
 
-def search(x,m,n,t):
-    l=0
-    r=m*n -1
-    while l<=r:
-        mid=(l+r)//2
-        row=mid//n
-        col=mid%n
-        midval=x[row][col]
-        if midval==t:
+# ------------------------
+# Optimal Python Solution
+# ------------------------
+
+def search_matrix(matrix, target):
+    rows = len(matrix)
+    cols = len(matrix[0])
+
+    left = 0
+    right = rows * cols - 1
+
+    while left <= right:
+
+        mid = (left + right) // 2
+
+        row = mid // cols
+        col = mid % cols
+
+        value = matrix[row][col]
+
+        if value == target:
             return True
-        elif midval<t:
-            l=mid+1
-        else:
-            r=mid-1
-    return False        
-        
-    
-    
-rows=int(input())
-cols=int(input())
-matrix=[list(map(int,input().split())) for _ in range(rows)]
-target=int(input())
 
-print(search(matrix,rows,cols,target))
+        elif value < target:
+            left = mid + 1
+
+        else:
+            right = mid - 1
+
+    return False
+
+
+# -------------
+# User Input
+# -------------
+r, c = map(int, input().split())
+matrix = [list(map(int, input().split())) for _ in range(r)]
+target = int(input())
+
+print(search_matrix(matrix, target))
