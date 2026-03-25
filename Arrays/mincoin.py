@@ -3,6 +3,11 @@ Given an infinite supply of each denomination of Indian currency {1,2,5,10,20,50
 and a target value N.
 Find the minimum number of coins and/or notes needed to make the change for Rs N.
 Return the list containing the value of coins required. 
+
+Example:
+
+Input: 5430
+Output: [2000, 2000, 500, 500, 200, 200, 20, 10]
 '''
 
 def minPartition(x):
